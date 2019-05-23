@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  layout: 'adminlte',
   middleware: 'auth',
 
   metaInfo () {

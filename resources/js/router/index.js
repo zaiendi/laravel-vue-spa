@@ -4,9 +4,25 @@ import Meta from 'vue-meta'
 import routes from './routes'
 import Router from 'vue-router'
 import { sync } from 'vuex-router-sync'
+import VueBreadcrumbs from 'vue-2-breadcrumbs'
 
 Vue.use(Meta)
 Vue.use(Router)
+Vue.use(VueBreadcrumbs, {
+  template:
+  '<div class="row mb-2">' +
+  '<div class="col-sm-6">' +
+  // '{{ getBreadcrumb($breadcrumbs[$breadcrumbs.length - 1].meta.title) }}' +
+  '</div>' +
+  '<div class="col-sm-6">' +
+  '<ol class="breadcrumb float-sm-right" v-if="$breadcrumbs.length">' +
+  '<li class="breadcrumb-item" v-if="crumb.meta.breadcrumb" v-for="(crumb, i) in $breadcrumbs">' +
+  '<router-link active-class="active" :to="{ path: crumb.path }" :tag="i != $breadcrumbs.length - 1 ? \'a\' : \'span\'">{{ getBreadcrumb(crumb.meta.breadcrumb) }}</router-link>' +
+  '</li>' +
+  '</ol>' +
+  '</div>' +
+  '</div>'
+})
 
 // The middleware for every page of the application.
 const globalMiddleware = ['locale', 'check-auth']

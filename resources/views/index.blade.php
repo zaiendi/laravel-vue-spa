@@ -16,7 +16,7 @@ $config = [
 
   <link rel="stylesheet" href="{{ mix('dist/css/app.css') }}">
 </head>
-<body>
+<body class="hold-transition sidebar-mini">
   <div id="app"></div>
 
   {{-- Global configuration object --}}
