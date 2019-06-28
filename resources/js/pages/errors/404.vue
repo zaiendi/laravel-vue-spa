@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  layout: 'adminlte',
   name: 'NotFound'
 }
 </script>

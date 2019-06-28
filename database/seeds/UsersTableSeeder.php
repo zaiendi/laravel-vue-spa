@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder
                 'name' => 'admin',
                 'email' => 'admin@me.com',
                 'email_verified_at' => Carbon::now()->subDays(1),
-                'password' => Hash::make('123123123'),
+                'password' => Hash::make('secret'),
                 'remember_token' => Str::random(10),
             ]);
 

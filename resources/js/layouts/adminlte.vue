@@ -22,13 +22,12 @@
         </div>
       </section>
     </div>
-    <footer class="main-footer">
+    <!-- <footer class="main-footer">
       <div class="float-right d-none d-sm-inline">
         Anything you want
       </div>
-      <!-- Default to the left -->
       <strong>Copyright &copy; 2014-2018 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-    </footer>
+    </footer> -->
   </div>
 </template>
 
